@@ -50,9 +50,7 @@ namespace homework9
         {
             var tempArray = Slice(args, begin);
 
-            return end < 0
-                ? tempArray.Take(tempArray.Length - end - 2).ToArray()
-                : tempArray.Take(end - 1).ToArray();
+            return end < 0 ? tempArray.Take(tempArray.Length + end).ToArray() : tempArray.Take(end - 1).ToArray();
         }
     }
 }
